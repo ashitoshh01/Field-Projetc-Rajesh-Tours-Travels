@@ -1,6 +1,6 @@
 "use client"
 
-import { MessageCircle, Instagram, Facebook, Phone, Mail, MapPin } from "lucide-react"
+import { MessageCircle, Instagram, Youtube, Phone, Mail, MapPin } from "lucide-react"
 import Image from "next/image"
 
 export default function Footer() {
@@ -71,18 +71,24 @@ export default function Footer() {
             <h3 className="font-bold mb-4">Follow Us</h3>
             <div className="flex gap-4">
               <a
-                href="https://wa.me/9190280 88631"
+                href="https://wa.me/919028088631"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-accent transition"
               >
                 <MessageCircle size={20} />
               </a>
-              <a href="https://www.instagram.com/rajesh_tours_and_travels_9360?igsh=MXg3a3FkZXFqYndoeQ==" className="hover:text-accent transition">
+              <a
+                href="https://www.instagram.com/rajesh_tours_and_travels_9360?igsh=MXg3a3FkZXFqYndoeQ=="
+                className="hover:text-accent transition"
+              >
                 <Instagram size={20} />
               </a>
-              <a href="https://youtube.com/@urbania9360onrentinpune?si=F2sLGmkYsr6xuXA6" className="hover:text-accent transition">
-                <Facebook size={20} />
+              <a
+                href="https://youtube.com/@urbania9360onrentinpune?si=F2sLGmkYsr6xuXA6"
+                className="hover:text-accent transition"
+              >
+                <Youtube size={20} />
               </a>
             </div>
           </div>

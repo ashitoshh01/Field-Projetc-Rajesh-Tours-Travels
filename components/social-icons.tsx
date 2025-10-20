@@ -18,7 +18,7 @@ export default function SocialIcons() {
     },
     {
       icon: MessageCircle,
-      href: "https://wa.me/9190280 88631",
+      href: "https://wa.me/919028088631",
       label: "WhatsApp",
       color: "bg-green-500 hover:bg-green-600",
     },
