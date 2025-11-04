@@ -3,7 +3,7 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { ChevronDown } from "lucide-react"
 
-const WHATSAPP_NUMBER = "+919518352166"
+const WHATSAPP_NUMBER = "919028088631"
 
 const packages = [
   {
