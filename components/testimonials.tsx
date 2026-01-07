@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import type React from "react"
 
 export default function Testimonials() {
   const testimonials = [
@@ -70,103 +70,83 @@ export default function Testimonials() {
     },
   ]
 
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const [isTransitioning, setIsTransitioning] = useState(false)
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIsTransitioning(true)
-      setTimeout(() => {
-        setCurrentIndex((prev) => (prev + 1) % testimonials.length)
-        setIsTransitioning(false)
-      }, 2500)
-    }, 5500) // 2.5s transition + 3s pause
-
-    return () => clearInterval(interval)
-  }, [testimonials.length])
-
   return (
     <section className="py-16 md:py-24 bg-background overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">What Our Travelers Say</h2>
           <p className="text-lg text-foreground/70">Real experiences from our happy customers</p>
         </div>
 
-        <div className="relative w-full overflow-hidden">
+        <div className="relative w-full mask-linear-fade">
           <style>{`
-            @keyframes slideInFromLeft {
-              from {
-                opacity: 0;
-                transform: translateX(-100%);
+            @keyframes scroll {
+              0% {
+                transform: translateX(-50%);
               }
-              to {
-                opacity: 1;
+              100% {
                 transform: translateX(0);
               }
             }
-
-            @keyframes slideOutToRight {
-              from {
-                opacity: 1;
-                transform: translateX(0);
-              }
-              to {
-                opacity: 0;
-                transform: translateX(100%);
-              }
+            .animate-scroll {
+              animation: scroll 40s linear infinite;
+              width: max-content;
             }
-
-            .testimonial-enter {
-              animation: slideInFromLeft 2.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+            .animate-scroll:hover {
+              animation-play-state: paused;
             }
-
-            .testimonial-exit {
-              animation: slideOutToRight 2.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+            .mask-linear-fade {
+              mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+              -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+            }
+            .testimonial-card:hover { 
+              transform: translateY(-5px);
+              box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
             }
           `}</style>
 
-          <div className="relative h-80 md:h-64">
-            {testimonials.map((testimonial, index) => {
-              const isActive = index === currentIndex
-              const isPrev = index === (currentIndex - 1 + testimonials.length) % testimonials.length
-
-              return (
-                <div
-                  key={testimonial.id}
-                  className={`absolute inset-0 transition-all duration-0 ${
-                    isActive ? "testimonial-enter" : isPrev && isTransitioning ? "testimonial-exit" : "opacity-0"
-                  }`}
-                >
-                  <div className="bg-card rounded-lg p-8 shadow-lg border border-border h-full flex flex-col justify-between">
-                    <div>
-                      <div className="flex items-center gap-4 mb-4">
-                        <img
-                          src={testimonial.image || "/placeholder.svg"}
-                          alt={testimonial.name}
-                          className="w-16 h-16 rounded-full object-cover"
-                        />
-                        <div>
-                          <h3 className="font-bold text-primary">{testimonial.name}</h3>
-                          <p className="text-sm text-foreground/70">{testimonial.role}</p>
-                        </div>
-                      </div>
-                      <div className="flex gap-1 mb-4">
-                        {[...Array(testimonial.rating)].map((_, i) => (
-                          <span key={i} className="text-accent text-lg">
-                            ★
-                          </span>
-                        ))}
-                      </div>
-                      <p className="text-foreground/80 leading-relaxed">{testimonial.text}</p>
-                    </div>
-                  </div>
-                </div>
-              )
-            })}
+          <div className="flex gap-6 animate-scroll py-4">
+            {/* First set of cards */}
+            {testimonials.map((testimonial) => (
+              <TestimonialCard key={`original-${testimonial.id}`} testimonial={testimonial} />
+            ))}
+            {/* Duplicate set for infinite scroll effect */}
+            {testimonials.map((testimonial) => (
+              <TestimonialCard key={`duplicate1-${testimonial.id}`} testimonial={testimonial} />
+            ))}
+            {/* Triplicate set for wider screens/seamless looping logic safety */}
+            {testimonials.map((testimonial) => (
+              <TestimonialCard key={`duplicate2-${testimonial.id}`} testimonial={testimonial} />
+            ))}
           </div>
         </div>
       </div>
     </section>
+  )
+}
+
+function TestimonialCard({ testimonial }: { testimonial: any }) {
+  return (
+    <div className="testimonial-card w-[350px] md:w-[400px] flex-shrink-0 bg-card p-6 rounded-lg shadow-md border border-border transition-all duration-300">
+      <div className="flex items-center gap-4 mb-4">
+        <img
+          src={testimonial.image || "/placeholder.svg"}
+          alt={testimonial.name}
+          className="w-14 h-14 rounded-full object-cover border-2 border-primary/10"
+        />
+        <div>
+          <h3 className="font-bold text-lg text-primary">{testimonial.name}</h3>
+          <p className="text-sm text-foreground/70">{testimonial.role}</p>
+        </div>
+      </div>
+      <div className="flex gap-1 mb-3">
+        {[...Array(testimonial.rating)].map((_, i) => (
+          <span key={i} className="text-accent text-sm">
+            ★
+          </span>
+        ))}
+      </div>
+      <p className="text-foreground/80 text-sm leading-relaxed line-clamp-4">{testimonial.text}</p>
+    </div>
   )
 }
