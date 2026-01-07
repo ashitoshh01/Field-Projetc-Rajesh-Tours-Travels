@@ -63,12 +63,7 @@ export default function Header() {
               >
                 Gallery
               </button>
-              <button
-                onClick={() => scrollToSection("contact")}
-                className="text-foreground hover:text-primary transition"
-              >
-                Contact
-              </button>
+
             </nav>
 
             {/* CTA Button */}
@@ -120,12 +115,7 @@ export default function Header() {
                 >
                   Gallery
                 </button>
-                <button
-                  onClick={() => scrollToSection("contact")}
-                  className="text-foreground hover:text-primary transition py-2 w-full text-center"
-                >
-                  Contact
-                </button>
+
                 <div className="w-full pt-2 border-t border-white/20">
                   <Button
                     onClick={() => scrollToSection("packages")}

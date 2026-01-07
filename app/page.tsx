@@ -22,7 +22,6 @@ export default function Home() {
         <CarCollection />
         <Gallery />
         <Testimonials />
-        <ContactForm />
       </div>
       <SocialIcons />
       <Footer />
