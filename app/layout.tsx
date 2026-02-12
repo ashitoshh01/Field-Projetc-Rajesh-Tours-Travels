@@ -37,6 +37,14 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
+  icons: {
+    icon: [
+      { url: '/icon.png', sizes: 'any' },
+    ],
+    apple: [
+      { url: '/apple-icon.png' },
+    ],
+  },
   openGraph: {
     title: "Rajesh Tours & Travels | Premium Urbania & Innova Rentals",
     description: "Plan your dream road trip with our luxury fleet including Force Urbania and Innova Crysta. Affordable rates, professional drivers, and unmatched comfort.",
@@ -73,6 +81,13 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+}
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
 }
 
 export default function RootLayout({
