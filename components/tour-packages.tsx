@@ -13,7 +13,7 @@ const packages = [
     description: "Pune → Ujjain – Khatu Shyam – Salasar Balaji – Pushkar – Sanwariya Seth",
     image: "/divine-india-pilgrimage.jpg",
     details:
-      "Start the new year with a divine spiritual journey covering some of the most sacred temples in India. This 5-day pilgrimage departs from Pune and includes travel by comfortable vehicle, morning breakfast, 4 nights hotel stay, and Darshan assistance. Visit Ujjain (Mahakal), Khatu Shyam Ji, Salasar Balaji, Pushkar Brahma Temple, and Sanwariya Seth.",
+      "Embark on a soul-cleansing 5-day spiritual odyssey starting from Pune. This comprehensive pilgrimage covers the sacred Mahakal in Ujjain, the divine Khatu Shyam Ji, Salasar Balaji, the holy Pushkar Brahma Temple, and Sanwariya Seth. The package includes comfortable travel, 4 nights of hotel accommodation, daily morning breakfast, and guided Darshan assistance for a hassle-free experience.",
     highlight: true,
   },
   {
@@ -23,7 +23,7 @@ const packages = [
     description: "Sacred pilgrimage to three holy Jyotirlinga temples",
     image: "/ujjain-omkareshwar.jpg",
     details:
-      "Experience the spiritual journey to three of India's most sacred Jyotirlinga temples. Visit Omkareshwar, Mahakal in Ujjain, and Ghrushneshwar. Includes accommodation, breakfast (Misal, Poha, Dosa), and guided tours to Ramghat Kshipra Aarti.",
+      "Immerse yourself in devotion with our 3-Day Jyotirlinga Darshan. We take you to the powerful spiritual centers of Omkareshwar, Mahakaleshwar in Ujjain, and Ghrushneshwar. Enjoy authentic local breakfasts like Misal and Poha, comfortable stays, and a special guided visit to the serene Ramghat Kshipra Aarti.",
   },
   {
     id: 2,
@@ -32,7 +32,7 @@ const packages = [
     description: "Spiritual journey to Shri Sant Balumama and Mahalaxmi",
     image: "/ashtavinayak.jpg",
     details:
-      "A one-day spiritual tour departing August 22, 2025 at 10:00 PM from multiple pickup points including Yerawada, Deccan Corner, Paud Phata, Karve Nagar, and Warje Bridge. Visit Shri Kshetra Balumama, Metage, Jyotiba, and Mahalaxmi Temple in Kolhapur.",
+      "Join our dedicated one-day spiritual excursion from Pune to Kolhapur. We offer convenient night departures with multiple pickups across Pune (Yerawada, Deccan, etc.). Seek blessings at Shri Kshetra Balumama in Admapur, visit the Metage holy site, Lord Jyotiba, and conclude with the divine Mahalaxmi Temple in Kolhapur.",
   },
   {
     id: 3,
@@ -41,7 +41,7 @@ const packages = [
     description: "Complete pilgrimage covering all five sacred Jyotirlinga temples",
     image: "/dham-yatra.jpg",
     details:
-      "An all-inclusive 4-day pilgrimage package covering Bhimashankar, Trimbakeshwar, Ghrushneshwar, Parali Vaijanath, and Aunda Nagnath. Includes accommodation, meals, and vehicle rental with Force Urbania for a comfortable journey.",
+      "A complete 5-Jyotirlinga pilgrimage in 4 days. Reverently visit Bhimashankar, Trimbakeshwar, Ghrushneshwar, Parali Vaijanath, and Aunda Nagnath. We ensure a premium experience with Force Urbania travel, all-inclusive meals, and comfortable lodging, allowing you to focus entirely on your prayers.",
   },
   {
     id: 4,
@@ -50,7 +50,7 @@ const packages = [
     description: "Explore ancient forts and palaces of Gujarat",
     image: "/gujarat.jpg",
     details:
-      "Discover the architectural marvels of Gujarat including ancient fort structures, historical palaces, and cultural heritage sites. Experience the rich history and traditions of the region with guided tours and local insights.",
+      "Step back in time with our Gujarat Heritage Tour. Wander through centuries-old forts, majestic palaces, and vibrant cultural landmarks. This 3-day journey offers a deep dive into Gujarat's royal history and architectural splendor, accompanied by expert guides who bring the stories of the past to life.",
   },
   {
     id: 5,
@@ -59,7 +59,7 @@ const packages = [
     description: "Serene backwater experience with tropical beauty",
     image: "/kerala.jpg",
     details:
-      "Enjoy a peaceful journey through Kerala's scenic backwaters. Experience traditional houseboat cruises, palm-fringed waterways, and authentic Kerala cuisine. Perfect for relaxation and nature lovers seeking tranquility.",
+      "Drift through the tranquil emerald waters of 'God's Own Country'. Our Kerala package features a traditional houseboat cruise along palm-lined canals, serving authentic Keralan cuisine. It's the ultimate 4-day escape for nature lovers seeking peace, greenery, and the soothing rhythm of the backwaters.",
   },
   {
     id: 6,
@@ -68,7 +68,7 @@ const packages = [
     description: "Visit the sacred Tirupati Balaji Temple",
     image: "/tirupati-balaji.jpg",
     details:
-      "A spiritual journey to one of India's most visited temples. Experience the divine atmosphere, participate in rituals, and receive blessings at the magnificent Tirupati Balaji Temple with comfortable accommodation and meals.",
+      "Fulfil your vow with a visit to the sacred Tirumala hills. Our 2-day Tirupati Balaji package ensures a smooth spiritual experience with arranged accommodation and meals. Witness the grandeur of Lord Venkateswara and soak in the divine atmosphere of one of the world's richest and most holy shrines.",
   },
   {
     id: 7,
@@ -77,25 +77,16 @@ const packages = [
     description: "Experience snow-capped mountains and scenic beauty",
     image: "/shimla-manali.jpg",
     details:
-      "Explore the breathtaking Himalayan landscapes of Shimla and Manali. Visit snow-covered peaks, pristine rivers, and charming hill towns. Includes adventure activities, local sightseeing, and comfortable stays in hill stations.",
+      "Escape to the majestic Himalayas with our Shimla & Manali tour. Witness snow-capped peaks, rushing rivers, and colonial-era charm. This 5-day adventure includes sightseeing in Mall Road, Solang Valley, and Rohtang Pass, paired with cozy hill-station stays and opportunities for thrilling mountain activities.",
   },
   {
     id: 8,
-    destination: "Goa Beach Paradise",
-    duration: "3 Days",
-    description: "Tropical beaches and coastal relaxation",
-    image: "/goa.jpg",
-    details:
-      "Unwind on Goa's beautiful beaches with turquoise waters and palm trees. Enjoy water sports, beach parties, local cuisine, and cultural experiences. Perfect for beach lovers and those seeking a tropical getaway.",
-  },
-  {
-    id: 9,
     destination: "Ratnagiri & Ganpatipule",
     duration: "2 Days",
     description: "Coastal temple pilgrimage and beach retreat",
     image: "/ratnagiri-ganpatipule.jpg",
     details:
-      "Visit the sacred Ganpatipule Temple on the Konkan coast. Combine spiritual pilgrimage with beach relaxation. Explore the coastal beauty, enjoy fresh seafood, and experience the peaceful atmosphere of this hidden gem.",
+      "Experience the best of Konkan with our Ratnagiri & Ganpatipule tour. Pay homage at the ancient Swayambhu Ganpati Temple on the beach, relax on pristine white sands, and savor authentic Konkani seafood. A perfect 2-day blend of spirituality and coastal serenity.",
   },
 ]
 

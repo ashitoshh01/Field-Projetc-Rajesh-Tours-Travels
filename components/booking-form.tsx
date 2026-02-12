@@ -4,6 +4,7 @@ import type React from "react"
 
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
+import { User, MapPin, Calendar, Car, Users, MessageSquare, Send } from "lucide-react"
 
 const WHATSAPP_NUMBER = "+919028088631"
 
@@ -73,179 +74,193 @@ Notes: ${formData.notes || "None"}`
   }
 
   return (
-    <section id="booking" className="py-16 md:py-24 bg-background">
-      <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="booking" className="py-16 md:py-24 bg-gradient-to-b from-background to-accent/5">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Plan Your Next Trip</h2>
-          <p className="text-lg text-foreground/70">Fill in your details and we'll get back to you via WhatsApp</p>
+          <h2 className="text-3xl md:text-5xl font-bold text-primary mb-4 tracking-tight">Plan Your Next Trip</h2>
+          <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
+            Ready for an adventure? Fill in your details below and we'll get back to you instantly via WhatsApp.
+          </p>
         </div>
 
-        <form onSubmit={handleSubmit} className="bg-card rounded-lg shadow-lg p-8 border border-border">
-          <div className="grid md:grid-cols-2 gap-6 mb-6">
+        <form
+          onSubmit={handleSubmit}
+          className="bg-card/80 backdrop-blur-md rounded-2xl shadow-xl p-8 md:p-10 border border-border/50 relative overflow-hidden"
+        >
+          {/* Decorative elements */}
+          <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-primary to-accent" />
+
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
             {/* Full Name */}
-            <div>
-              <label className="block text-sm font-semibold text-foreground mb-2">Full Name *</label>
-              <input
-                type="text"
-                name="fullName"
-                value={formData.fullName}
-                onChange={handleChange}
-                className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-                placeholder="Your name"
-              />
-              {errors.fullName && <p className="text-red-500 text-sm mt-1">{errors.fullName}</p>}
+            <div className="space-y-2">
+              <label className="text-sm font-semibold text-foreground flex items-center gap-2">
+                Full Name <span className="text-red-500">*</span>
+              </label>
+              <div className="relative">
+                <User className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground h-5 w-5" />
+                <input
+                  type="text"
+                  name="fullName"
+                  value={formData.fullName}
+                  onChange={handleChange}
+                  className="w-full pl-10 pr-4 py-3 bg-background/50 border border-input rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all duration-200"
+                  placeholder="e.g., Akash Pawar"
+                />
+              </div>
+              {errors.fullName && <p className="text-red-500 text-xs mt-1 font-medium">{errors.fullName}</p>}
             </div>
 
             {/* Pickup Location */}
-            <div>
-              <label className="block text-sm font-semibold text-foreground mb-2">Pickup Location *</label>
-              <input
-                type="text"
-                name="pickupLocation"
-                value={formData.pickupLocation}
-                onChange={handleChange}
-                className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-                placeholder="e.g., Pune"
-              />
-              {errors.pickupLocation && <p className="text-red-500 text-sm mt-1">{errors.pickupLocation}</p>}
+            <div className="space-y-2">
+              <label className="text-sm font-semibold text-foreground flex items-center gap-2">
+                Pickup Location <span className="text-red-500">*</span>
+              </label>
+              <div className="relative">
+                <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground h-5 w-5" />
+                <input
+                  type="text"
+                  name="pickupLocation"
+                  value={formData.pickupLocation}
+                  onChange={handleChange}
+                  className="w-full pl-10 pr-4 py-3 bg-background/50 border border-input rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all duration-200"
+                  placeholder="e.g., Alandi, Dhanori, etc."
+                />
+              </div>
+              {errors.pickupLocation && <p className="text-red-500 text-xs mt-1 font-medium">{errors.pickupLocation}</p>}
             </div>
 
             {/* Destination */}
-            <div>
-              <label className="block text-sm font-semibold text-foreground mb-2">Destination *</label>
-              <input
-                type="text"
-                name="destination"
-                value={formData.destination}
-                onChange={handleChange}
-                className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-                placeholder="e.g., Manali"
-              />
-              {errors.destination && <p className="text-red-500 text-sm mt-1">{errors.destination}</p>}
+            <div className="space-y-2">
+              <label className="text-sm font-semibold text-foreground flex items-center gap-2">
+                Destination <span className="text-red-500">*</span>
+              </label>
+              <div className="relative">
+                <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground h-5 w-5" />
+                <input
+                  type="text"
+                  name="destination"
+                  value={formData.destination}
+                  onChange={handleChange}
+                  className="w-full pl-10 pr-4 py-3 bg-background/50 border border-input rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all duration-200"
+                  placeholder="e.g., Mahabaleshwar"
+                />
+              </div>
+              {errors.destination && <p className="text-red-500 text-xs mt-1 font-medium">{errors.destination}</p>}
             </div>
 
             {/* Date */}
-            <div>
-              <label className="block text-sm font-semibold text-foreground mb-2">Date of Travel *</label>
-              <input
-                type="date"
-                name="date"
-                value={formData.date}
-                onChange={handleChange}
-                className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-              />
-              {errors.date && <p className="text-red-500 text-sm mt-1">{errors.date}</p>}
+            <div className="space-y-2">
+              <label className="text-sm font-semibold text-foreground flex items-center gap-2">
+                Date of Travel <span className="text-red-500">*</span>
+              </label>
+              <div className="relative">
+                <Calendar className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground h-5 w-5" />
+                <input
+                  type="date"
+                  name="date"
+                  value={formData.date}
+                  onChange={handleChange}
+                  className="w-full pl-10 pr-4 py-3 bg-background/50 border border-input rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all duration-200"
+                />
+              </div>
+              {errors.date && <p className="text-red-500 text-xs mt-1 font-medium">{errors.date}</p>}
             </div>
 
             {/* Car Preference */}
-            <div>
-              <label className="block text-sm font-semibold text-foreground mb-2">Car Preference *</label>
-              <select
-                name="carPreference"
-                value={formData.carPreference}
-                onChange={handleChange}
-                className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-              >
-                <option value="Urbania">Urbania</option>
-                <option value="Innova Crysta">Innova Crysta</option>
-                <option value="Maruti Swift">Maruti Swift</option>
-              </select>
+            <div className="space-y-2">
+              <label className="text-sm font-semibold text-foreground flex items-center gap-2">
+                Car Preference <span className="text-red-500">*</span>
+              </label>
+              <div className="relative">
+                <Car className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground h-5 w-5" />
+                <select
+                  name="carPreference"
+                  value={formData.carPreference}
+                  onChange={handleChange}
+                  className="w-full pl-10 pr-4 py-3 bg-background/50 border border-input rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all duration-200 appearance-none"
+                >
+                  <option value="Urbania">Force Urbania (Premium)</option>
+                  <option value="Innova Crysta">Innova Crysta (Luxury)</option>
+                  <option value="Maruti Swift">Maruti Swift (Compact)</option>
+                </select>
+                <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none">
+                  <svg className="h-4 w-4 text-muted-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
+              </div>
             </div>
 
-            {formData.carPreference === "Urbania" && (
-              <div>
-                <label className="block text-sm font-semibold text-foreground mb-2">Number of Passengers *</label>
+            {/* Passengers */}
+            <div className="space-y-2">
+              <label className="text-sm font-semibold text-foreground flex items-center gap-2">
+                Passengers <span className="text-red-500">*</span>
+              </label>
+              <div className="relative">
+                <Users className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground h-5 w-5" />
                 <select
                   name="passengers"
                   value={formData.passengers}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  className="w-full pl-10 pr-4 py-3 bg-background/50 border border-input rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all duration-200 appearance-none"
                 >
-                  <option value="">Select passengers</option>
-                  <option value="1">1 </option>
-                  <option value="2">2 </option>
-                  <option value="3">3 </option>
-                  <option value="4">4 </option>
-                  <option value="5">5 </option>
-                  <option value="6">6 </option>
-                  <option value="7">7 </option>
-                  <option value="8">8 </option>
-                  <option value="9">9 </option>
-                  <option value="10">10 </option>
-                  <option value="11">11 </option>
-                  <option value="12">12 </option>
-                  <option value="13">13 </option>
-                  <option value="14">14 </option>
-                  <option value="15">15 </option>
-                  <option value="16">16 </option>
-                  <option value="17">17</option>
+                  <option value="">Select count</option>
+                  {formData.carPreference === "Urbania" &&
+                    [...Array(17)].map((_, i) => (
+                      <option key={i + 1} value={i + 1}>
+                        {i + 1}
+                      </option>
+                    ))}
+                  {formData.carPreference === "Innova Crysta" &&
+                    [...Array(7)].map((_, i) => (
+                      <option key={i + 1} value={i + 1}>
+                        {i + 1}
+                      </option>
+                    ))}
+                  {formData.carPreference === "Maruti Swift" &&
+                    [...Array(4)].map((_, i) => (
+                      <option key={i + 1} value={i + 1}>
+                        {i + 1}
+                      </option>
+                    ))}
                 </select>
-                {errors.passengers && <p className="text-red-500 text-sm mt-1">{errors.passengers}</p>}
+                <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none">
+                  <svg className="h-4 w-4 text-muted-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
               </div>
-            )}
-
-            {formData.carPreference === "Innova Crysta" && (
-              <div>
-                <label className="block text-sm font-semibold text-foreground mb-2">Number of Passengers *</label>
-                <select
-                  name="passengers"
-                  value={formData.passengers}
-                  onChange={handleChange}
-                  className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-                >
-                  <option value="">Select passengers</option>
-                  <option value="1">1 </option>
-                  <option value="2">2 </option>
-                  <option value="3">3 </option>
-                  <option value="4">4 </option>
-                  <option value="5">5 </option>
-                  <option value="6">6 </option>
-                  <option value="7">7 </option>
-                </select>
-                {errors.passengers && <p className="text-red-500 text-sm mt-1">{errors.passengers}</p>}
-              </div>
-            )}
-
-            {formData.carPreference === "Maruti Swift" && (
-              <div>
-                <label className="block text-sm font-semibold text-foreground mb-2">Number of Passengers *</label>
-                <select
-                  name="passengers"
-                  value={formData.passengers}
-                  onChange={handleChange}
-                  className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-                >
-                  <option value="">Select passengers</option>
-                  <option value="1">1 </option>
-                  <option value="2">2 </option>
-                  <option value="3">3 </option>
-                  <option value="4">4 </option>
-                </select>
-                {errors.passengers && <p className="text-red-500 text-sm mt-1">{errors.passengers}</p>}
-              </div>
-            )}
+              {errors.passengers && <p className="text-red-500 text-xs mt-1 font-medium">{errors.passengers}</p>}
+            </div>
           </div>
 
           {/* Additional Notes */}
-          <div className="mb-6">
-            <label className="block text-sm font-semibold text-foreground mb-2">Additional Notes</label>
-            <textarea
-              name="notes"
-              value={formData.notes}
-              onChange={handleChange}
-              className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-              placeholder="Any special requests or requirements..."
-              rows={4}
-            />
+          <div className="mb-8 space-y-2">
+            <label className="text-sm font-semibold text-foreground flex items-center gap-2">Additional Notes</label>
+            <div className="relative">
+              <MessageSquare className="absolute left-3 top-4 text-muted-foreground h-5 w-5" />
+              <textarea
+                name="notes"
+                value={formData.notes}
+                onChange={handleChange}
+                className="w-full pl-10 pr-4 py-3 bg-background/50 border border-input rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all duration-200 min-h-[120px]"
+                placeholder="Any special requests like baby seat, extra luggage, or specific route..."
+              />
+            </div>
           </div>
 
           {/* Submit Button */}
           <Button
             type="submit"
-            className="w-full bg-accent hover:bg-accent/90 text-accent-foreground py-3 text-lg font-semibold rounded-lg"
+            className="w-full bg-[#25D366] hover:bg-[#128C7E] text-white py-6 text-lg font-bold rounded-xl shadow-lg shadow-[#25D366]/20 hover:shadow-[#25D366]/40 transition-all duration-300 flex items-center justify-center gap-2"
           >
-            Send via WhatsApp
+            <Send className="h-5 w-5" />
+            Send Inquiry
           </Button>
+
+          <p className="text-center text-xs text-muted-foreground mt-4">
+            We typically reply within 15 minutes during business hours.
+          </p>
         </form>
       </div>
     </section>
