@@ -1,11 +1,21 @@
 "use client"
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import { ChevronDown } from "lucide-react"
+import { ChevronDown, Star } from "lucide-react"
 
 const WHATSAPP_NUMBER = "919028088631"
 
 const packages = [
+  {
+    id: 0,
+    destination: "Divine India Pilgrimage (New)",
+    duration: "5 Days / 4 Nights",
+    description: "Pune → Ujjain – Khatu Shyam – Salasar Balaji – Pushkar – Sanwariya Seth",
+    image: "/divine-india-pilgrimage.jpg",
+    details:
+      "Start the new year with a divine spiritual journey covering some of the most sacred temples in India. This 5-day pilgrimage departs from Pune and includes travel by comfortable vehicle, morning breakfast, 4 nights hotel stay, and Darshan assistance. Visit Ujjain (Mahakal), Khatu Shyam Ji, Salasar Balaji, Pushkar Brahma Temple, and Sanwariya Seth.",
+    highlight: true,
+  },
   {
     id: 1,
     destination: "Three Jyotirlinga Darshan",
@@ -108,52 +118,88 @@ export default function TourPackages() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {packages.map((pkg) => (
+          {packages.map((pkg, index) => (
             <div
               key={pkg.id}
-              className="bg-card rounded-lg shadow-lg overflow-hidden border border-border hover:shadow-xl transition-shadow"
+              className={`bg-card rounded-lg overflow-hidden border transition-all duration-300 relative flex flex-col ${pkg.highlight
+                ? "border-yellow-500 shadow-[0_0_40px_-5px_rgba(234,179,8,0.6)] z-10 md:col-span-2 lg:col-span-1 ring-4 ring-yellow-500/20 animate-heartbeat"
+                : "border-border shadow-lg hover:shadow-xl"
+                }`}
             >
+              {pkg.highlight && (
+                <>
+                  <div className="absolute top-4 right-4 z-20 bg-yellow-500 text-white px-3 py-1 rounded-full text-xs font-bold animate-pulse flex items-center gap-1 shadow-lg shadow-yellow-500/50">
+                    <Star size={12} fill="currentColor" /> NEW
+                  </div>
+                  {/* Subtle shine animation */}
+                  <div className="absolute inset-0 z-0 bg-gradient-to-tr from-yellow-500/10 via-white/5 to-amber-500/10 pointer-events-none" />
+                </>
+              )}
               {/* Image */}
-              <div className="h-48 bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center overflow-hidden">
+              <div className="h-48 bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center overflow-hidden relative">
                 <img
                   src={pkg.image || "/placeholder.svg"}
                   alt={pkg.destination}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 />
+                {pkg.highlight && <div className="absolute inset-0 bg-yellow-500/10 pointer-events-none mix-blend-overlay" />}
               </div>
 
               {/* Content */}
-              <div className="p-6">
-                <h3 className="text-2xl font-bold text-primary mb-2">{pkg.destination}</h3>
-                <p className="text-sm text-foreground/60 mb-3">{pkg.duration}</p>
-                <p className="text-foreground/70 mb-4">{pkg.description}</p>
-
-                <div className="mb-4">
-                  <button
-                    onClick={() => setExpandedId(expandedId === pkg.id ? null : pkg.id)}
-                    className="flex items-center gap-2 text-accent hover:text-accent/80 font-semibold transition"
+              <div className="p-6 relative z-10 flex flex-col flex-1">
+                <div className="flex-1">
+                  <h3
+                    className={`text-2xl font-bold mb-2 ${pkg.highlight
+                      ? "text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-amber-600"
+                      : "text-primary"
+                      }`}
                   >
-                    Read More
-                    <ChevronDown
-                      size={18}
-                      className={`transition-transform ${expandedId === pkg.id ? "rotate-180" : ""}`}
-                    />
-                  </button>
-
-                  {expandedId === pkg.id && (
-                    <div className="mt-3 p-3 bg-accent/10 rounded-lg border border-accent/20">
-                      <p className="text-sm text-foreground/80">{pkg.details}</p>
-                    </div>
-                  )}
+                    {pkg.destination}
+                  </h3>
+                  <p className="text-sm text-foreground/60 mb-3 font-medium">{pkg.duration}</p>
+                  <p className="text-foreground/70 mb-4 line-clamp-3">{pkg.description}</p>
                 </div>
 
-                {/* Book Now Button */}
-                <Button
-                  onClick={() => handleBookNow(pkg)}
-                  className="w-full bg-accent hover:bg-accent/90 text-accent-foreground rounded-full"
-                >
-                  Book Now
-                </Button>
+                <div className="mt-auto">
+                  <div className="mb-4">
+                    <button
+                      onClick={() => setExpandedId(expandedId === pkg.id ? null : pkg.id)}
+                      className={`flex items-center gap-2 font-semibold transition ${pkg.highlight ? "text-yellow-600 hover:text-yellow-700" : "text-accent hover:text-accent/80"
+                        }`}
+                    >
+                      Read More
+                      <ChevronDown
+                        size={18}
+                        className={`transition-transform ${expandedId === pkg.id ? "rotate-180" : ""}`}
+                      />
+                    </button>
+
+                    <div
+                      className={`grid transition-all duration-300 ease-in-out ${expandedId === pkg.id ? "grid-rows-[1fr] opacity-100 mt-3" : "grid-rows-[0fr] opacity-0"
+                        }`}
+                    >
+                      <div className="overflow-hidden">
+                        <div
+                          className={`p-3 rounded-lg border ${pkg.highlight ? "bg-yellow-50/50 border-yellow-200" : "bg-accent/10 border-accent/20"
+                            }`}
+                        >
+                          <p className="text-sm text-foreground/80">{pkg.details}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Book Now Button */}
+                  <Button
+                    onClick={() => handleBookNow(pkg)}
+                    className={`w-full rounded-full font-bold py-6 transition-all duration-300 ${pkg.highlight
+                      ? "bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-600 hover:to-amber-700 text-white shadow-lg shadow-yellow-500/25 hover:shadow-yellow-500/40 border-none"
+                      : "bg-accent hover:bg-accent/90 text-accent-foreground"
+                      }`}
+                  >
+                    Book Now
+                  </Button>
+                </div>
               </div>
             </div>
           ))}

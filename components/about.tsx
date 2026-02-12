@@ -5,7 +5,7 @@ export default function About() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Image */}
           <div className="order-2 md:order-1">
-            <img src="/crysta-about.jpg" alt="Innova Crysta" className="rounded-lg shadow-lg w-full" />
+            <img src="/crysta-new-about.jpg" alt="Innova Crysta" className="rounded-lg shadow-lg w-full" />
           </div>
 
           {/* Content */}

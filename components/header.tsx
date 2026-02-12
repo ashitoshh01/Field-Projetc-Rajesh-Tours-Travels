@@ -27,9 +27,12 @@ export default function Header() {
 
   return (
     <header className="fixed top-2 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-6xl">
-      <div className="bg-white/80 backdrop-blur-md border border-white/20 rounded-full shadow-lg">
-        <div className="px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
+      <div
+        className={`bg-white/95 backdrop-blur-md backdrop-saturate-150 border border-white/20 shadow-[0_0_20px_rgba(0,0,0,0.1)] transition-all duration-300 ${isOpen ? "rounded-3xl" : "rounded-full"
+          }`}
+      >
+        <div className="px-3 sm:px-5 lg:px-6">
+          <div className="flex justify-between items-center h-14">
             {/* Logo */}
             <div className="flex items-center gap-2">
               <Image src="/logo.png" alt="RajeshTours & Travels" width={40} height={40} className="h-10 w-auto" />
@@ -63,7 +66,6 @@ export default function Header() {
               >
                 Gallery
               </button>
-
             </nav>
 
             {/* CTA Button */}
@@ -81,7 +83,7 @@ export default function Header() {
           </div>
 
           {isOpen && (
-            <div className="md:hidden bg-white/95 backdrop-blur-md border border-white/20 rounded-2xl shadow-lg mx-2 mb-4 p-6 animate-in slide-in-from-top-2 duration-300">
+            <div className="md:hidden pt-2 pb-6 animate-in slide-in-from-top-2 duration-300">
               <div className="flex flex-col gap-3 items-center">
                 <button
                   onClick={() => scrollToSection("home")}
@@ -116,7 +118,7 @@ export default function Header() {
                   Gallery
                 </button>
 
-                <div className="w-full pt-2 border-t border-white/20">
+                <div className="w-full pt-2 border-t border-black/10">
                   <Button
                     onClick={() => scrollToSection("packages")}
                     className="w-full bg-accent hover:bg-accent/90 text-accent-foreground rounded-full mt-3"
