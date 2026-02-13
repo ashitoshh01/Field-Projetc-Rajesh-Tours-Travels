@@ -1,6 +1,13 @@
 import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
 import Image from "next/image"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Suzuki Swift Rental Pune | 5 Seater Hatchback Car Hire",
+  description: "Rent Suzuki Swift in Pune for city travel, outstation trips, and daily commute. Affordable rates, well-maintained cars, and self-drive or chauffeur options.",
+  keywords: ["Suzuki Swift Rental Pune", "Hatchback Car Hire Pune", "Small Car Rental", "Swift Car Rent Price", "Budget Car Rental Pune"],
+}
 
 export default function SuzukiSwiftPage() {
   return (

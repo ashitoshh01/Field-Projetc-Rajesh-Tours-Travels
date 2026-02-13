@@ -7,7 +7,7 @@ import BookingForm from "@/components/booking-form"
 import CarCollection from "@/components/car-collection"
 import Gallery from "@/components/gallery"
 import Testimonials from "@/components/testimonials"
-import ContactForm from "@/components/contact-form"
+
 import SocialIcons from "@/components/social-icons"
 import Footer from "@/components/footer"
 

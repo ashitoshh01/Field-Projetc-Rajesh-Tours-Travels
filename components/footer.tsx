@@ -1,6 +1,6 @@
 "use client"
 
-import { MessageCircle, Instagram, Youtube, Phone, Mail, MapPin } from "lucide-react"
+import { Phone, Mail, MapPin } from "lucide-react"
 import Image from "next/image"
 
 export default function Footer() {

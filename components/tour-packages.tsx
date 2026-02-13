@@ -110,7 +110,7 @@ export default function TourPackages() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {packages.map((pkg, index) => (
+          {packages.map((pkg) => (
             <div
               key={pkg.id}
               className={`bg-card rounded-lg overflow-hidden border transition-all duration-300 relative flex flex-col ${pkg.highlight

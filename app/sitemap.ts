@@ -12,7 +12,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
             changeFrequency: "weekly",
             priority: 1,
         },
-        // Add other pages if they exist, e.g., /about, /contact, etc.
-        // Since everything seems to be on a single page currently (scrolling sections), we just include the root.
+        {
+            url: `${baseUrl}/cars/urbania`,
+            lastModified: new Date(),
+            changeFrequency: "weekly",
+            priority: 0.8,
+        },
+        {
+            url: `${baseUrl}/cars/innova-crysta`,
+            lastModified: new Date(),
+            changeFrequency: "weekly",
+            priority: 0.8,
+        },
+        {
+            url: `${baseUrl}/cars/suzuki-swift`,
+            lastModified: new Date(),
+            changeFrequency: "weekly",
+            priority: 0.8,
+        },
     ]
 }

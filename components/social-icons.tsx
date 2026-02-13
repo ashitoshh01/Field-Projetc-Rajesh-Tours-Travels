@@ -1,6 +1,7 @@
 "use client"
 
-import { Instagram, Youtube, MessageCircle } from "lucide-react"
+import { Instagram, Youtube } from "lucide-react"
+import { FaWhatsapp } from "react-icons/fa"
 
 export default function SocialIcons() {
   const socialLinks = [
@@ -17,7 +18,7 @@ export default function SocialIcons() {
       color: "bg-red-500/80 hover:bg-red-600",
     },
     {
-      icon: MessageCircle,
+      icon: FaWhatsapp,
       href: "https://wa.me/919028088631",
       label: "WhatsApp",
       color: "bg-green-500/80 hover:bg-green-600",

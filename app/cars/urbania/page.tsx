@@ -1,6 +1,13 @@
 import Link from "next/link"
 import Image from "next/image"
 import { ArrowLeft } from "lucide-react"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Force Urbania Rental Pune | 17 Seater Luxury Van",
+  description: "Book Force Urbania 17 seater luxury van in Pune. Best rates, premium comfort, and professional drivers for outstation trips, corporate events, and weddings.",
+  keywords: ["Force Urbania Rental Pune", "17 Seater Van Hire", "Luxury Bus Rental Pune", "Urbania on Rent", "Wedding Car Rental Pune"],
+}
 
 export default function UrbaniaPage() {
   return (

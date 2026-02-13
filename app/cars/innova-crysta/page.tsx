@@ -1,6 +1,13 @@
 import Link from "next/link"
 import Image from "next/image"
 import { ArrowLeft } from "lucide-react"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Innova Crysta Rental Pune | 7 & 6 Seater Premium Car Hire",
+  description: "Hire Toyota Innova Crysta in Pune for outstation, local travel, and airport transfers. Top-rated service, clean cars, and experienced chauffeurs.",
+  keywords: ["Innova Crysta Rental Pune", "Innova Hire Pune", "7 Seater Car Rental", "Toyota Innova Crysta Price", "Family Car Rental Pune"],
+}
 
 export default function InnovaCrystaPage() {
   return (

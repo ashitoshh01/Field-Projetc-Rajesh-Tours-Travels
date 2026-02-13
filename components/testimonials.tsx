@@ -117,7 +117,16 @@ export default function Testimonials() {
   )
 }
 
-function TestimonialCard({ testimonial }: { testimonial: any }) {
+interface Testimonial {
+  id: number
+  name: string
+  role: string
+  image: string
+  text: string
+  rating: number
+}
+
+function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
   return (
     <div className="testimonial-card w-[350px] md:w-[400px] flex-shrink-0 bg-card p-6 rounded-lg shadow-md border border-border transition-all duration-300">
       <div className="flex items-center gap-4 mb-4">
