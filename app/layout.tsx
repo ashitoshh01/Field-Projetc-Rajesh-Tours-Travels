@@ -39,11 +39,13 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/icon.png', sizes: 'any' },
+      { url: '/favicon.ico', sizes: '32x32', type: 'image/x-icon' },
+      { url: '/icon.png', sizes: '512x512', type: 'image/png' },
     ],
     apple: [
-      { url: '/apple-icon.png' },
+      { url: '/apple-icon.png', sizes: '512x512', type: 'image/png' },
     ],
+    shortcut: ['/favicon.ico'],
   },
   openGraph: {
     title: "Rajesh Tours & Travels | Premium Urbania & Innova Rentals",
