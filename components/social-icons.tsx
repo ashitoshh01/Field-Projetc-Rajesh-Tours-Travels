@@ -6,7 +6,7 @@ export default function SocialIcons() {
   const socialLinks = [
     {
       icon: Instagram,
-      href: "https://www.instagram.com/rajesh_tours_and_travels_9360?igsh=MXg3a3FkZXFqYndoeQ%3D%3D",
+      href: "https://www.instagram.com/rajesh_tours_and_travels_9360",
       label: "Instagram",
       color: "bg-pink-500/80 hover:bg-pink-600",
     },

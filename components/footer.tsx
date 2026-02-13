@@ -9,11 +9,11 @@ export default function Footer() {
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Company Info - Full width on mobile */}
           <div className="md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <Image src="/logo.png" alt="RajeshTours & Travels Logo" width={40} height={40} className="h-10 w-auto" />
+              <Image src="/logo.png" alt="RajeshTours & Travels Logo" width={80} height={80} className="h-16 md:h-10 w-auto" />
             </div>
             <p className="text-primary-foreground/80 text-sm">
               Premium road trips across India with comfort and style.
@@ -69,32 +69,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Social Links - Full width on mobile */}
-          <div className="md:col-span-1">
-            <h3 className="font-bold mb-4">Follow Us</h3>
-            <div className="flex gap-4">
-              <a
-                href="https://wa.me/919028088631"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-accent transition"
-              >
-                <MessageCircle size={20} />
-              </a>
-              <a
-                href="https://www.instagram.com/rajesh_tours_and_travels_9360?igsh=MXg3a3FkZXFqYndoeQ=="
-                className="hover:text-accent transition"
-              >
-                <Instagram size={20} />
-              </a>
-              <a
-                href="https://youtube.com/@urbania9360onrentinpune?si=F2sLGmkYsr6xuXA6"
-                className="hover:text-accent transition"
-              >
-                <Youtube size={20} />
-              </a>
-            </div>
-          </div>
+
         </div>
 
         {/* Divider */}
