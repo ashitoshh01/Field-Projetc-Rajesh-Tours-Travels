@@ -65,11 +65,11 @@ const packages = [
   {
     id: 6,
     destination: "Tirupati Balaji Pilgrimage",
-    duration: "2 Days",
+    duration: "5 Days",
     description: "Visit the sacred Tirupati Balaji Temple",
     image: "/tirupati-balaji.jpg",
     details:
-      "Fulfil your vow with a visit to the sacred Tirumala hills. Our 2-day Tirupati Balaji package ensures a smooth spiritual experience with arranged accommodation and meals. Witness the grandeur of Lord Venkateswara and soak in the divine atmosphere of one of the world's richest and most holy shrines.",
+      "Fulfil your vow with a visit to the sacred Tirumala hills. Our 5-day Tirupati Balaji package ensures a smooth spiritual experience with arranged accommodation and meals. Witness the grandeur of Lord Venkateswara and soak in the divine atmosphere of one of the world's richest and most holy shrines.",
   },
   {
     id: 7,

@@ -13,7 +13,7 @@ export default function SocialIcons() {
     },
     {
       icon: Youtube,
-      href: "https://www.youtube.com/@urbania9360onrentinpune",
+      href: "https://youtube.com/@urbania9360?si=NWldeRgOJx9zSbUI",
       label: "YouTube",
       color: "bg-red-500/80 hover:bg-red-600",
     },
