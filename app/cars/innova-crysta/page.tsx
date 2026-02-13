@@ -25,7 +25,7 @@ export default function InnovaCrystaPage() {
           <div className="grid md:grid-cols-2 gap-6">
             <div className="rounded-lg overflow-hidden h-80">
               <Image
-                src="/crysta-2.jpg"
+                src="/innova-new.jpg"
                 alt="Innova Crysta front view"
                 width={500}
                 height={320}
@@ -50,14 +50,14 @@ export default function InnovaCrystaPage() {
                 className="w-full h-full object-cover"
               />
               <div className="rounded-lg overflow-hidden h-80">
-              <Image
-                src="/crysta-1.jpg"
-                alt="Innova Crysta in scenic landscape"
-                width={500}
-                height={500}
-                className="w-full h-full object-cover"
-              />
-            </div>
+                <Image
+                  src="/crysta-1.jpg"
+                  alt="Innova Crysta in scenic landscape"
+                  width={500}
+                  height={500}
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>

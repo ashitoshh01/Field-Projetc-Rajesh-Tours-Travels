@@ -82,7 +82,7 @@ export default function UrbaniaPage() {
               </div>
               <div className="bg-secondary p-4 rounded-lg">
                 <p className="text-sm text-foreground/70">Fuel Type</p>
-                <p className="text-2xl font-bold text-primary">Diesel/Petrol</p>
+                <p className="text-2xl font-bold text-primary">Diesel</p>
               </div>
             </div>
           </div>

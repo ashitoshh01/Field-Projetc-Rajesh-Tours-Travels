@@ -39,7 +39,7 @@ const cars: Car[] = [
       "Smooth ride quality",
       "Spacious cargo area",
     ],
-    image: "/crysta.jpg",
+    image: "/innova-new.jpg",
     preference: 2,
   },
   {

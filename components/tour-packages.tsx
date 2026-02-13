@@ -8,9 +8,9 @@ const WHATSAPP_NUMBER = "919028088631"
 const packages = [
   {
     id: 0,
-    destination: "Divine India Pilgrimage (New)",
+    destination: "Panch Teerth Darshan Yatra",
     duration: "5 Days / 4 Nights",
-    description: "Pune → Ujjain – Khatu Shyam – Salasar Balaji – Pushkar – Sanwariya Seth",
+    description: "Pune → Ujjain – Khatu Shyam – Salasar Balaji – Pushkar – Sawariya Seth",
     image: "/divine-india-pilgrimage.jpg",
     details:
       "Embark on a soul-cleansing 5-day spiritual odyssey starting from Pune. This comprehensive pilgrimage covers the sacred Mahakal in Ujjain, the divine Khatu Shyam Ji, Salasar Balaji, the holy Pushkar Brahma Temple, and Sanwariya Seth. The package includes comfortable travel, 4 nights of hotel accommodation, daily morning breakfast, and guided Darshan assistance for a hassle-free experience.",
@@ -18,12 +18,13 @@ const packages = [
   },
   {
     id: 1,
-    destination: "Three Jyotirlinga Darshan",
-    duration: "3 Days",
-    description: "Sacred pilgrimage to three holy Jyotirlinga temples",
-    image: "/ujjain-omkareshwar.jpg",
+    destination: "Pune to Ujjain",
+    duration: "3 Days / 2 Nights",
+    description: "Pune → Maheshwar – Omkareshwar – Kal Bhairav Temple – Ujjain",
+    image: "/ujjain-mahakal.jpg",
     details:
-      "Immerse yourself in devotion with our 3-Day Jyotirlinga Darshan. We take you to the powerful spiritual centers of Omkareshwar, Mahakaleshwar in Ujjain, and Ghrushneshwar. Enjoy authentic local breakfasts like Misal and Poha, comfortable stays, and a special guided visit to the serene Ramghat Kshipra Aarti.",
+      "Experience divine blessings with our Pune to Ujjain pilgrimage package. Visit the sacred Mahakaleshwar Jyotirlinga, one of the twelve Jyotirlingas in India. Witness the famous Bhasma Aarti at dawn, explore the ancient Kshipra River ghats, and seek blessings at Ram Ghat. The package includes comfortable AC travel, hotel accommodation, breakfast, and guided temple visits for a spiritually enriching experience.",
+    highlight: true,
   },
   {
     id: 2,

@@ -7,8 +7,8 @@ import Image from "next/image"
 
 const slides = [
   {
-    image: "/rajasthan.jpg",
-    title: "Discover Rajasthan's Royal Heritage",
+    image: "/konkan-malvan.jpg",
+    title: "Relax on Coastal Beaches",
   },
   {
     image: "/ashtavinayak.jpg",
@@ -19,8 +19,8 @@ const slides = [
     title: "Explore Mountain Wonders",
   },
   {
-    image: "/konkan-malvan.jpg",
-    title: "Relax on Coastal Beaches",
+    image: "/rajasthan.jpg",
+    title: "Discover Rajasthan's Royal Heritage",
   },
 ]
 
