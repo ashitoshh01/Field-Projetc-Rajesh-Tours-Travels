@@ -114,7 +114,7 @@ export default function TourPackages() {
             <div
               key={pkg.id}
               className={`bg-card rounded-lg overflow-hidden border transition-all duration-300 relative flex flex-col ${pkg.highlight
-                ? "border-yellow-500 shadow-[0_0_40px_-5px_rgba(234,179,8,0.6)] z-10 md:col-span-2 lg:col-span-1 ring-4 ring-yellow-500/20 animate-heartbeat"
+                ? `border-yellow-500 shadow-[0_0_40px_-5px_rgba(234,179,8,0.6)] z-10 md:col-span-2 lg:col-span-1 ring-4 ring-yellow-500/20 ${pkg.id === 0 ? 'animate-heartbeat-1' : 'animate-heartbeat-2'}`
                 : "border-border shadow-lg hover:shadow-xl"
                 }`}
             >

@@ -37,14 +37,6 @@ export default function Testimonials() {
       rating: 5,
     },
     {
-      id: 5,
-      name: "Neha Gupta",
-      role: "Honeymoon Trip",
-      image: "https://images.unsplash.com/photo-1517841905240-472988babdf0?w=400&h=400&fit=crop",
-      text: "Our honeymoon was made special by RajeshTours. The Swift was perfect for exploring scenic routes. Highly professional and punctual!",
-      rating: 5,
-    },
-    {
       id: 6,
       name: "Arjun Desai",
       role: "Business Travel",

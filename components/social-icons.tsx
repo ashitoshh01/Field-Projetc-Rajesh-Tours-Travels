@@ -8,19 +8,19 @@ export default function SocialIcons() {
       icon: Instagram,
       href: "https://www.instagram.com/rajesh_tours_and_travels_9360?igsh=MXg3a3FkZXFqYndoeQ%3D%3D",
       label: "Instagram",
-      color: "bg-pink-500 hover:bg-pink-600",
+      color: "bg-pink-500/80 hover:bg-pink-600",
     },
     {
       icon: Youtube,
       href: "https://www.youtube.com/@urbania9360onrentinpune",
       label: "YouTube",
-      color: "bg-red-500 hover:bg-red-600",
+      color: "bg-red-500/80 hover:bg-red-600",
     },
     {
       icon: MessageCircle,
       href: "https://wa.me/919028088631",
       label: "WhatsApp",
-      color: "bg-green-500 hover:bg-green-600",
+      color: "bg-green-500/80 hover:bg-green-600",
     },
   ]
 

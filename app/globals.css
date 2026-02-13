@@ -141,20 +141,49 @@
   }
 }
 
-@keyframes heartbeat {
+
+@keyframes heartbeat-1 {
 
   0%,
-  100% {
+  50% {
     transform: scale(1);
   }
 
-  50% {
+  25% {
     transform: scale(1.08);
+  }
+
+  50%,
+  100% {
+    transform: scale(1);
   }
 }
 
-.animate-heartbeat {
-  animation: heartbeat 2s ease-in-out infinite;
-  animation-delay: 0s;
-  will-change: transform;
+@keyframes heartbeat-2 {
+
+  0%,
+  50% {
+    transform: scale(1);
+  }
+
+  75% {
+    transform: scale(1.08);
+  }
+
+  50%,
+  100% {
+    transform: scale(1);
+  }
+}
+
+@layer utilities {
+  .animate-heartbeat-1 {
+    animation: heartbeat-1 4s ease-in-out infinite;
+    will-change: transform;
+  }
+
+  .animate-heartbeat-2 {
+    animation: heartbeat-2 4s ease-in-out infinite;
+    will-change: transform;
+  }
 }
